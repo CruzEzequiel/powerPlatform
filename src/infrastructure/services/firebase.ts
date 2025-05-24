@@ -2,7 +2,6 @@ import { initializeApp, getApps, FirebaseApp } from 'firebase/app';
 import { getAuth, Auth } from 'firebase/auth';
 
 console.log("configurando firebase")
-console.log("key",process.env.NEXT_PUBLIC_FIREBASE_API_KEY)
 
 // Configuración de Firebase
 const firebaseConfig = {
