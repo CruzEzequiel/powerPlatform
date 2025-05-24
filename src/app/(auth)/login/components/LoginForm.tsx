@@ -27,35 +27,35 @@ export default function LoginForm() {
         if (success) router.push("/dashboard");
     };
 
-    if (loading || isLogging) {
-        return (
-            <div className="flex justify-center items-center h-screen">
-                <LoadingSpinner />
-            </div>
-        );
-    }
-
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            <input
-                type="email"
-                placeholder="Correo"
-                className="border px-4 py-2 rounded-md"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-            />
-            <input
-                type="password"
-                placeholder="Contraseña"
-                className="border px-4 py-2 rounded-md"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-            />
-            <button type="submit" className="bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
-                Iniciar sesión
-            </button>
-        </form>
+        <div className="relative">
+            {(loading || isLogging) && (
+                <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+                    <LoadingSpinner />
+                </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <input
+                    type="email"
+                    placeholder="Correo"
+                    className="border px-4 py-2 rounded-md"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <input
+                    type="password"
+                    placeholder="Contraseña"
+                    className="border px-4 py-2 rounded-md"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                />
+                <button type="submit" className="bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                    Iniciar sesión
+                </button>
+            </form>
+        </div>
     );
 }

@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </header>
 
             <main className="flex-grow">
-                <div className="mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+                <div className=" w-full">
                     {children}
                 </div>
             </main>
