@@ -1,14 +1,5 @@
-"use client";
+import { redirect } from 'next/navigation';
 
-export default function Redirect() {
-    return (
-        <html>
-            <head>
-                <meta httpEquiv="refresh" content="0; URL=/login" />
-            </head>
-            <body>
-                <p>Redireccionando a /dashboard...</p>
-            </body>
-        </html>
-    );
+export default function Page() {
+    redirect("/login");
 }
