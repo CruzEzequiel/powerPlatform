@@ -1,3 +1,5 @@
+"use client";
+
 export default function LoadingSpinner() {
     return (
         <div className="flex flex-col justify-center items-center w-[200px] h-[200px] bg-white rounded-lg shadow-lg text-center">

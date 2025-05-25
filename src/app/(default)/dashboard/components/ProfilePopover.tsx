@@ -1,4 +1,6 @@
-import {useAuth} from "@/app/context/authContext/useAuth";
+"use client";
+
+import { useAuth } from "@/app/context/authContext/useAuth";
 
 export default function ProfileCard() {
     const { user, logout } = useAuth();

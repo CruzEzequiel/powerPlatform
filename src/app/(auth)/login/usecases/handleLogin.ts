@@ -1,3 +1,5 @@
+"use client";
+
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/infrastructure/services/firebase";
 
