@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword } from "@firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/infrastructure/services/firebase";
 
 export default async function handleLogin(email: string, password: string): Promise<boolean> {
