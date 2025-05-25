@@ -75,6 +75,9 @@ yarn dev
 
 La aplicación estará disponible en: `http://localhost:3000`
 
+## Atajos
+se incluye un script para construir en docker solo ejecuta  'sudo ./docker_run.sh'
+
 ---
 
 Este frontend consume datos desde una API protegida con Firebase, y permite visualizar estaciones de carga eléctricas tanto en modo **dashboard** como en lista.
