@@ -13,6 +13,11 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
+if (process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID) {
+  console.log(`NEXT_PUBLIC_FIREBASE_PROJECT_ID: ${process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID}`);
+} else {
+  console.error('ERROR: NEXT_PUBLIC_FIREBASE_PROJECT_ID no está definida');
+}
 
 export default firebaseConfig;
 
